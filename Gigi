@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los días que no estás</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            display: none; /* Oculta todos los días inicialmente */
+        }
+        .active {
+            display: block; /* Muestra solo el día activo */
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 200px;
+            height: 250px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cover {
+            text-align: center;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cover-title {
+            font-size: 2em;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        .cover-time {
+            font-size: 3em;
+            font-family: 'Courier New', Courier, monospace;
+            color: #888;
+            margin: 10px 0;
+        }
+        .cover-subtitle {
+            font-size: 1em;
+            color: #aaa;
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        let currentDay = 1;
+
+        function mostrarDia(dia) {
+            const totalDías = 6; // Total de días
+            document.getElementById(`dia${currentDay}`).classList.remove('active');
+            currentDay = dia;
+            document.getElementById(`dia${currentDay}`).classList.add('active');
+            if (currentDay === 1) {
+                document.getElementById('cover').classList.remove('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Portada -->
+    <div class="cover active" id="cover">
+        <div class="cover-title">Los días que no estás</div>
+        <div class="cover-time">11:11</div>
+        <div class="cover-subtitle">para Génesis</div>
+        <img src="imagen_portada.jpeg"" alt=Imagen en la portadag" style="width: 300px; height: auto; margin: 20px 0;">
+        <button class="button" onclick="mostrarDia(1)">Empezar</button>
+    </div>
+
+    <!-- Día 1 -->
+    <div id="dia1" class="container active">
+        <h1>Los días que no estás - Día 1</h1>
+        <img src="gene.png" alt="Recuerdo de los días que no estás">
+        <p>
+            Hoy empieza este viaje de contar los días sin ti,<br>
+            y aunque la distancia se haga eterna, aquí sigo,<br>
+            recordando que a las 11:11 éramos nosotros.<br>
+            El tiempo se detiene, pero mis recuerdos no.
+        </p>
+        <p>
+            Porque cada 11:11 trae un suspiro, un deseo,<br>
+            de esos que hacíamos juntos,<br>
+            en un rincón de nuestros sueños.<br>
+            Y aunque no estés, sigues siendo mi 11:11.
+        </p>
+        <p>Escucha la canción en Spotify: <a href="https://open.spotify.com/track/0TzPApPjiPWXv98qSCrgbp" target="_blank">Babysita</a></p>
+        <button class="button" onclick="mostrarDia(2)">Siguiente Día</button>
+    </div>
+
+    <!-- Día 2 -->
+    <div id="dia2" class="container">
+        <h1>Los días que no estás - Día 2</h1>
+        <img src="imagen_dia2.jpeg" alt="Recuerdo de los días que no estás - Día 2">
+        <p>
+            Hoy, en este segundo día sin ti, siento que cada rincón de mi mundo lleva tu nombre.<br>
+            Eres esa chispa que enciende mis días, y aunque la distancia nos separe, tus recuerdos me acompañan.<br>
+            No importa cuántos días pasen, tú eres y siempre serás la única que hace que me sienta yo.<br>
+        </p>
+        <p>
+            El tiempo sigue, pero mi corazón espera, como quien espera un amanecer hermoso.<br>
+            Porque sabes, aunque no estés, te siento en cada latido, en cada pensamiento.<br>
+            Eres mi razón, mi paz, y cada día sin ti es una cuenta regresiva para volver a estar juntos.
+        </p>
+        <p>Escucha la canción en Spotify: <a href="https://open.spotify.com/track/48fSe5XXSej9Gc0L9QlNGN" target="_blank">No Te Quiero Perder</a></p>
+        <button class="button" onclick="mostrarDia(3)">Siguiente Día</button>
+    </div>
+
+    <!-- Día 3 -->
+    <div id="dia3" class="container">
+        <h1>Los días que no estás - Día 3</h1>
+        <img src="imagen_dia3.jpeg" alt="Recuerdo de los días que no estás - Día 3">
+        <p>
+            Hoy es el tercer día sin ti, y me viene a la mente aquel momento especial,<br>
+            cuando te di el anillo de promesa. Fue un símbolo de todo lo que quería para nosotros,<br>
+            de la vida que soñaba a tu lado. Porque, desde siempre, he querido casarme contigo.
+        </p>
+        <p>
+            Ese anillo representa mi promesa, una que llevo en el corazón y que permanece<br>
+            cada día. Aunque estemos lejos, esa promesa sigue viva, porque sé que<br>
+            tú eres mi destino, mi hogar, y el amor de mi vida.
+        </p>
+        <p>Escucha la canción en Spotify: <a href="https://open.spotify.com/track/5SHwS0L6Q1MDZluxsDsx3r?si=SyPUV2tWTBe2gKZvfj0ujQ&context=spotify%3Asearch" target="_blank">Joe</a></p>
+        <button class="button" onclick="mostrarDia(4)">Siguiente Día</button>
+    </div>
+
+    <!-- Día 4 -->
+    <div id="dia4" class="container">
+        <h1>Los días que no estás - Día 4</h1>
+        <img src="imagen_dia4.jpeg" alt="Recuerdo de los días que no estás - Día 4">
+        <p>
+            Hoy extraño tus besos en la noche, esos que me hacían sentir en casa.<br>
+            También extraño cómo me decías que todo estaría bien,<br>
+            porque para mí, tú siempre serás mi Gigi chiquita y mi princesita bella.<br>
+        </p>
+        <p>
+            Cada día sin ti es una prueba, pero recordar tus palabras y tus besos<br>
+            me da fuerzas para seguir.<br>
+        </p>
+        <p>Escucha la canción en Spotify: <a href="https://open.spotify.com/track/2PZuFDO3jh5RHLX6CGEpsW?si=bIw7rAt4QXGsucCjrGAPKA&context=spotify%3Asearch%3Atrue%2Bloce%2B" target="_blank">True Love</a></p>
+        <button class="button" onclick="mostrarDia(5)">Siguiente Día</button>
+    </div>
+
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los días que no estás</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 200px;
+            height: 250px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        let currentDay = 1;
+
+        function mostrarDia(dia) {
+            const totalDías = 7;
+            document.getElementById(`dia${currentDay}`).classList.remove('active');
+            currentDay = dia;
+            document.getElementById(`dia${currentDay}`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <!-- Día 5 -->
+    <div id="dia5" class="container active">
+        <h1>Los días que no estás - Día 5</h1>
+        <img src="imagen_dia5.jpeg" alt="Recuerdo de los días que no estás - Día 5">
+        <p>
+            Hoy quiero hablarte de tus ojos, esos que me hipnotizan,<br>
+            que me hacen sentir afortunado de tenerte a mi lado.<br>
+            Mis palabras siempre se quedan cortas cuando intento describir<br>
+            lo que esos ojos me hacen sentir, princesa mía, mi cielo.
+        </p>
+        <p>Escucha la canción en Spotify: <a href="https://open.spotify.com/track/5ODyvHsj2kxuhW0yWBmWAV" target="_blank">No Puedo</a></p>
+        <button class="button" onclick="mostrarDia(6)">Siguiente Día</button>
+    </div>
+
+    <!-- Día 6 -->
+    <div id="dia6" class="container">
+        <h1>Los días que no estás - Día 6</h1>
+        <img src="imagen_dia6.jpeg" alt="Recuerdo de los días que no estás - Día 6">
+        <p>
+            Hoy la vida me recuerda lo linda que eres, cada momento a tu lado<br>
+            se siente eterno, como si el tiempo solo existiera para nosotros.<br>
+            No hay nada más bonito que tenerte en mi mente y corazón.<br>
+            Y aunque no estemos juntos, cada recuerdo tuyo me da fuerzas.
+        </p>
+        <p>Escucha la canción en Spotify: <a href="https://open.spotify.com/track/62pg2fFuBb6zgU2gqJR8kP" target="_blank">Flores</a></p>
+        <button class="button" onclick="mostrarDia(7)">Siguiente Día</button>
+    </div>
+
+    <!-- Día 7 -->
+<div id="dia7" class="container">
+    <h1>Los días que no estás - Día 7</h1>
+    <img src="imagen_dia7.jpeg" alt="Recuerdo de los días que no estás - Día 7">
+    <p>
+        Hoy llego al final de este viaje, y quiero que entiendas todo lo que significas para mí.<br>
+        Aunque nuestra historia fue a distancia, cada llamada, cada mensaje, y cada momento<br>
+        juntos lo sentí como si estuvieras a mi lado. Siempre soñé con un futuro contigo,<br>
+        con abrazos de verdad, con una vida compartida, y aunque la distancia se hizo larga,<br>
+        mi amor por ti siempre fue más fuerte.
+    </p>
+    <p>
+        Guardaré cada recuerdo de esta relación, porque en cada despedida, en cada<br>
+        palabra, en cada promesa, tú fuiste mi hogar, mi paz, y mi sueño. Mi único<br>
+        anhelo fue casarme contigo, construir nuestra historia juntos, y aunque no<br>
+        pudimos lograrlo, sé que este amor es eterno, que tú siempre serás la dueña<br>
+        de mi corazón.
+    </p>
+    <p>
+        Te amo y te amaré siempre, incluso a la distancia, porque tú eres y siempre<br>
+        serás mi historia, mi esperanza y mi razón de ser. Gracias por cada segundo,<br>
+        por cada promesa, y por cada sueño que compartimos en este amor sin fronteras.<br>
+        Te amo más allá de toda despedida.
+    </p>
+    <p>Escucha la canción en Spotify: <a href="https://open.spotify.com/track/1C3kTwvBsskFSdL95gXHej" target="_blank">Canción Final</a></p>
+</div>
